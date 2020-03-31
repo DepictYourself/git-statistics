@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
                 // tsv.parse created empty object inbetween actual objects with real data
                 // so i just remove them with filter.
                 parsed = parsed.filter( (el, i) => i % 2 == 1 );
-                res.send(parsed);
+                res.send(JSON.stringify(parsed));
             });
         }
     });
