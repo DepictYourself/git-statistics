@@ -1,3 +1,5 @@
+let PORT = process.env.PORT || 3000;
+
 const request = require('request');
 const cheerio = require('cheerio');
 var tsv = require('tsv');
@@ -48,4 +50,4 @@ app.get('/', (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log('Listening on port 3000'));
+app.listen( PORT, () => console.log('Listening on port'));
