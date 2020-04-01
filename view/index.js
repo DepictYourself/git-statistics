@@ -4,7 +4,7 @@ window.onload = function() {
     const tableHead = document.querySelector('.table-head-row');
     const tableBody = document.querySelector('.table-body');
 
-    fetch("http://localhost:3000/", { mode: 'cors', })
+    fetch(document.URL+"gitstat", { mode: 'cors', })
     .then(response => response.json())
     .then(data => {
         // table headers
