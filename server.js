@@ -10,7 +10,12 @@ const app = express();
 
 const gitstaturl = 'http://users.nik.uni-obuda.hu/gitstats/';
 
+app.use(express.static(__dirname+"/view"));
 app.get('/', (req, res) => {
+    res.sendFile(__dirname + "/view/index.html");
+});
+
+app.get('/gitstat', (req, res) => {
 
     // set header
     res.header("Access-Control-Allow-Origin", "*");
@@ -50,4 +55,4 @@ app.get('/', (req, res) => {
     });
 });
 
-app.listen( PORT, () => console.log('Listening on port'));
+app.listen( PORT, () => console.log('Listening on port: ' + PORT));
