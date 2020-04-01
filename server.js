@@ -10,6 +10,9 @@ const gitstaturl = 'http://users.nik.uni-obuda.hu/gitstats/';
 
 app.get('/', (req, res) => {
 
+    // set header
+    res.header("Access-Control-Allow-Origin", "*");
+
     // we check the gitstat website.
     // for the available test files.
     request(gitstaturl, (error, response, html) => {
