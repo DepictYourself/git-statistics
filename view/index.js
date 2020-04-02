@@ -4,7 +4,9 @@ window.onload = function() {
     const tableHead = document.querySelector('.table-head-row');
     const tableBody = document.querySelector('.table-body');
 
-    fetch(document.URL+"gitstat", { mode: 'cors', })
+    // document.URL.split("?")[0]
+    // shitty temporary fix for fbclid
+    fetch(document.URL.split("?")[0]+"gitstat", { mode: 'cors', })
     .then(response => response.json())
     .then(data => {
         // table headers

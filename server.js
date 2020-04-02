@@ -12,7 +12,12 @@ const gitstaturl = 'http://users.nik.uni-obuda.hu/gitstats/';
 
 app.use(express.static(__dirname+"/view"));
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/view/index.html");
+    if(!isEmpty(req.query)){
+        //TODO: How the fuck do I do this ?
+    } else {
+        //res.sendFile(__dirname + "/view/index.html");
+    }
+    
 });
 
 app.get('/gitstat', (req, res) => {
@@ -56,3 +61,7 @@ app.get('/gitstat', (req, res) => {
 });
 
 app.listen( PORT, () => console.log('Listening on port: ' + PORT));
+
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}
