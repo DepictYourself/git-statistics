@@ -14,12 +14,8 @@ window.onload = function() {
         for(let prop in firstObj){
             if(firstObj.hasOwnProperty(prop)){
                 
-                let abbr = document.createElement("abbr");
-                abbr.setAttribute("title", prop);
-                abbr.appendChild(document.createTextNode(prop));
-                
                 let th = document.createElement("th");
-                th.appendChild(abbr);
+                th.appendChild(document.createTextNode(prop));
 
                 tableHead.appendChild(th);
             }
@@ -31,12 +27,24 @@ window.onload = function() {
 
             for(let prop in element){
                 if(element.hasOwnProperty(prop)){
-                    let abbr = document.createElement("abbr");
-                    abbr.setAttribute("title", prop);
-                    abbr.appendChild(document.createTextNode(element[prop]));
-
+                    
                     let td = document.createElement("td");
-                    td.appendChild(abbr);
+                    
+                    // if the data is false or true. use a favicon instead
+                    if (element[prop] === "False"){
+                        td.innerHTML = 
+                        `<span class="icon has-text-danger">
+                            <i class="fas fa-ban"></i>
+                        </span>`    
+                    } else if (element[prop] === "True"){
+                        td.innerHTML = 
+                        `<span class="icon has-text-success">
+                            <i class="fas fa-check-square"></i>
+                        </span>`
+                    }else {
+                        td.appendChild(document.createTextNode(element[prop]))
+                    }
+
                     tr.appendChild(td);
                 }
             }
