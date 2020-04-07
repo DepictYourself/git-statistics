@@ -21,6 +21,9 @@ window.onload = function() {
             }
         }
 
+        // hide loader icon
+        document.getElementById('circularG').style.display="none";
+
         data.forEach(element => {
             
             let tr = document.createElement("tr");
@@ -52,7 +55,6 @@ window.onload = function() {
             tr.onclick = function() {
                 this.classList.toggle('is-selected');
             }
-
             tableBody.appendChild(tr);
 
         });
