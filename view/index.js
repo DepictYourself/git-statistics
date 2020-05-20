@@ -36,14 +36,10 @@ window.onload = function() {
                     // if the data is false or true. use a favicon instead
                     if (element[prop] === "False"){
                         td.innerHTML = 
-                        `<span class="icon has-text-danger">
-                            <i class="fas fa-ban"></i>
-                        </span>`    
+                        `<img src="img/false.svg" alt="false" height="20" width="20">`
                     } else if (element[prop] === "True"){
                         td.innerHTML = 
-                        `<span class="icon has-text-success">
-                            <i class="fas fa-check-square"></i>
-                        </span>`
+                        `<img src="img/true.svg" alt="true" height="20" width="20">`
                     }else {
                         td.appendChild(document.createTextNode(element[prop]))
                     }
@@ -59,5 +55,5 @@ window.onload = function() {
 
         });
     });
-
 }
+
