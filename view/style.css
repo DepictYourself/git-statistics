@@ -1,17 +1,10 @@
-html {
+/* html {
     overflow-x: auto;
 }
 
-.table {
-    overflow-y: auto;
-}
 
-table.table thead th {
-	text-align: center;
-    position: sticky;
-    top: 0;
-    background: white;
-}
+
+
 
 .table tr.is-selected {
     background-color: #018b77;
@@ -19,6 +12,16 @@ table.table thead th {
 
 table.table tbody td {
 	text-align: center;
+} */
+
+table {
+	font-size: 14px !important;
+}
+
+table.table thead th {
+    position: sticky;
+	top: 0;
+	background: #343a40;
 }
 
 /*

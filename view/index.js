@@ -36,10 +36,10 @@ window.onload = function() {
                     // if the data is false or true. use a favicon instead
                     if (element[prop] === "False"){
                         td.innerHTML = 
-                        `<img src="img/false.svg" alt="false" height="20" width="20">`
+                        `<img src="img/false.svg" alt="false" height="16" width="16">`
                     } else if (element[prop] === "True"){
                         td.innerHTML = 
-                        `<img src="img/true.svg" alt="true" height="20" width="20">`
+                        `<img src="img/true.svg" alt="true" height="16" width="16">`
                     }else {
                         td.appendChild(document.createTextNode(element[prop]))
                     }
@@ -49,7 +49,7 @@ window.onload = function() {
             }
 
             tr.onclick = function() {
-                this.classList.toggle('is-selected');
+                this.classList.toggle('table-active');
             }
             tableBody.appendChild(tr);
 
