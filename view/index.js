@@ -35,9 +35,11 @@ window.onload = function() {
                     
                     // if the data is false or true. use a favicon instead
                     if (element[prop] === "False"){
+                        td.style.textAlign = "center";
                         td.innerHTML = 
-                        `<img src="img/false.svg" alt="false" height="16" width="16">`
+                        `<img src="img/false.svg" alt="false" height="16" width="16" >`
                     } else if (element[prop] === "True"){
+                        td.style.textAlign = "center";
                         td.innerHTML = 
                         `<img src="img/true.svg" alt="true" height="16" width="16">`
                     }else {
