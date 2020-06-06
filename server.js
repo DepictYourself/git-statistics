@@ -38,7 +38,13 @@ app.get('/gitstat', (req, res) => {
             
             // get all a tags and filter the tests
             const tests = $('a').filter((i, el) => {
-                return $(el).attr('href').includes('test');
+                // if the element's link which is a filename.
+                // begins with tests_ and ends with .tsv
+                if ($(el).attr('href').search("tests_.*\.tsv") !== -1)
+                {
+                    return true;
+                }
+                return false;
             });
             
             // select the last node.
