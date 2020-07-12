@@ -1,18 +1,7 @@
-/* html {
-    overflow-x: auto;
+body {
+	background-color: #515961;
+	color: white;
 }
-
-
-
-
-
-.table tr.is-selected {
-    background-color: #018b77;
-}
-
-table.table tbody td {
-	text-align: center;
-} */
 
 table {
 	font-size: 14px !important;
